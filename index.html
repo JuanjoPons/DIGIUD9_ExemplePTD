@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transformación digital para panaderías y PYMES artesanales. De la libreta al control total: digitaliza tu negocio sin perder su esencia ni invertir fortunas.">
+    <meta name="keywords" content="transformación digital pymes, digitalizar panadería, eficiencia operativa, TPV panadería, gestión stock panadería">
+    
+    <!-- Schema.org para SEO local -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Plan de Transformación Digital para PYMES Artesanales",
+        "provider": {
+            "@type": "Organization",
+            "name": "Consultoría Transformación Digital"
+        },
+        "description": "Digitalización integral de panaderías y negocios artesanales: ERP, TPV, presencia online y capacitación del equipo."
+    }
+    </script>
+
+    <title>De la Libreta al Control Total | Transformación Digital PYME</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        warm: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Optimización Carga Crítica */
+        .hero-bg { background: linear-gradient(135deg, #0c4a6e 0%, #0284c7 100%); }
+        .grain { position: relative; }
+        .grain::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+        
+        /* Animaciones suaves */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .float { animation: float 6s ease-in-out infinite; }
+        
+        /* Contraste para accesibilidad */
+        .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+    <!-- Navegación mínima -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="font-serif text-xl font-bold text-brand-900">Panadería<span class="text-warm-500">Digital</span></div>
+            <a href="#contacto" class="hidden sm:block bg-brand-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-brand-700 transition shadow-lg hover:shadow-xl">
+                Diagnóstico Gratis
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden hero-bg grain">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <!-- Badge de urgencia suave -->
+                    <div class="inline-flex items-center bg-white/10 backdrop-blur rounded-full px-4 py-1.5 mb-6 border border-white/20">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></span>
+                        <span class="text-white/90 text-sm font-medium">Metodología probada en panaderías artesanales</span>
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl lg:text-6xl font-bold text-white leading-tight mb-6 text-shadow">
+                        Tu panadería funciona… 
+                        <span class="block text-warm-300 italic">hasta que no</span>
+                    </h1>
+                    
+                    <p class="text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Deja de depender de libretas manchadas de harina y la memoria del dueño. 
+                        <strong class="text-white">Digitaliza tu negocio en 90 días</strong> sin perder el trato artesanal ni invertir en sistemas complejos.
+                    </p>
+                    
+                    <!-- Variantes CTA para A/B testing -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <!-- Variante A: Beneficio -->
+                        <a href="#contacto" class="cta-primary bg-warm-500 hover:bg-warm-600 text-white text-lg font-bold py-4 px-8 rounded-full shadow-2xl hover:shadow-warm-500/30 transition transform hover:-translate-y-1 text-center">
+                            Quiero controlar mi negocio →
+                        </a>
+                        <!-- Variante B: Riesgo (para testing) -->
+                        <a href="#antes-despues" class="cta-secondary bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 text-lg font-semibold py-4 px-8 rounded-full transition text-center backdrop-blur">
+                            Ver transformación real
+                        </a>
+                    </div>
+                    
+                    <p class="mt-4 text-sm text-blue-200">
+                        ✅ Sin costes de consultoría desorbitados • ✅ Empezamos en 48h • ✅ Tu equipo aprende usando
+                    </p>
+                </div>
+                
+                <!-- Imagen Hero: Contraste visual inmediato -->
+                <div class="relative float">
+                    <!-- 
+                    PROMPT IMAGEN HERO:
+                    "Split-screen photography, left side: messy bakery back office with flour-covered notebooks, chaotic paper invoices pinned to wall, stressed owner at 3am under yellow light, disorganized shelves. Right side: same bakery modernized, clean tablet showing dashboard graphs, smiling team with smartphone, organized digital workspace, warm natural lighting. Cinematic, realistic, high detail, color grading: teal and orange."
+                    -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop" 
+                             alt="Transformación digital panadería: de libretas manchadas a dashboards limpios" 
+                             class="w-full h-auto object-cover"
+                             loading="eager">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-900/80 to-transparent flex items-end p-6">
+                            <div class="text-white">
+                                <p class="font-bold text-lg">El cambio es posible</p>
+                                <p class="text-sm opacity-90">Desde 50€/mes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EL PROBLEMA (Dolor) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="text-warm-600 font-semibold tracking-wide uppercase text-sm">La realidad del negocio artesanal</span>
+            <h2 class="font-serif text-3xl lg:text-4xl font-bold text-gray-900 mt-3 mb-6">
+                ¿Te suena esta escena a las 4 de la mañana?
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed mb-12">
+                Estás amasando el pan del día mientras intentas recordar si el bar de la esquina pidió 4 o 5 barras ayer. 
+                El teléfono no para, una factura del proveedor lleva 3 semanas perdida entre harina, 
+                y tu sobrino (el único que entiende de "eso de Instagram") se ha ido de vacaciones.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                    <div class="text-red-600 text-2xl mb-2">📉</div>
+                    <h3 class="font-bold text-gray-900 mb-2">El 85% de nuevos clientes</h3>
+                    <p class="text-gray-600 text-sm">Buscan panaderías online, pero tú eres invisible en Google Maps. Sigues dependiendo solo del boca a boca.</p>
+                </div>
+                <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                    <div class="text-red-600 text-2xl mb-2">📝</div>
+                    <h3 class="font-bold text-gray-900 mb-2">La merma invisible</h3>
+                    <p class="text-gray-600 text-sm">Sin control de stock digital, pierdes hasta un 15% de tu producción diaria. Eso son cientos de euros al mes en harina y tiempo.</p>
+                </div>
+                <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                    <div class="text-red-600 text-2xl mb-2">⛓️</div>
+                    <h3 class="font-bold text-gray-900 mb-2">El negocio eres tú</h3>
+                    <p class="text-gray-600 text-sm">Si te pones enfermo, nadie sabe dónde están los pedidos ni cómo funcionan los proveedores. Todo está en tu cabeza.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN LA TRANSFORMACIÓN (Puente) -->
+    <section class="py-16 bg-brand-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-xl p-8 lg:p-12 border border-brand-100">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="font-serif text-3xl font-bold text-gray-900 mb-4">
+                        Imagina abrir el negocio sabiendo exactamente qué producir
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        No se trata de convertir tu obrador en una fábrica fría. 
+                        Se trata de <strong>blindar lo que ya funciona</strong> y eliminar lo que te roba energía: 
+                        el papeleo, los descuadres de caja, los "¿me pones una docena?" que se olvidan.
+                    </p>
+                </div>
+                
+                <!-- Visual intermedia: Proceso -->
+                <!-- 
+                PROMPT IMAGEN PROCESO:
+                "Timeline infographic style photography, warm bakery interior. Left to right transition: 1) Owner looking at messy notebook with worried expression, 2) Same owner touching tablet with simple dashboard showing bread icons and numbers, 3) Owner smiling serving customer with modern POS system. Soft morning light, flour dust in air, professional but cozy atmosphere."
+                -->
+                <div class="relative rounded-xl overflow-hidden mb-8 bg-gray-100 h-64 lg:h-80">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=400&fit=crop" 
+                         alt="Evolución del control del negocio: de la libreta al digital" 
+                         class="w-full h-full object-cover"
+                         loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CLAVE: ANTES VS DESPUÉS -->
+    <section id="antes-despues" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl font-bold mb-4">Antes vs Después</h2>
+                <p class="text-gray-400 text-lg">Lo que cambia en tu día a día real</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Columna ANTES -->
+                <div class="bg-gray-800 rounded-2xl p-8 border border-gray-700 opacity-80 hover:opacity-100 transition">
+                    <div class="flex items-center mb-6">
+                        <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-bold mr-3">ANTES</span>
+                        <h3 class="text-xl font-bold text-gray-300">El caos artesanal</h3>
+                    </div>
+                    
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1">❌</span>
+                            <span><strong>Inventario:</strong> Recuento manual a ojo cada semana. "Creo que quedan 5 sacos de harina..."</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1">❌</span>
+                            <span><strong>Clientes:</strong> No sabes quién compra qué. Pierdes al cliente habitual porque no recordaste su nombre.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1">❌</span>
+                            <span><strong>Pedidos:</strong> Notas en servilletas que se pierden. "¿Me dijo el martes o el miércoles?"</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1">❌</span>
+                            <span><strong>Cierre:</strong> 2 horas cuadrando caja con calculadora. Errores de 20€ que no encuentras.</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- 
+                    PROMPT IMAGEN ANTES:
+                    "Chaotic bakery scene, cluttered wooden desk covered with flour-dusted paper notebooks, handwritten receipts scattered, old calculator, stressed middle-aged baker with flour on face looking exhausted at 5am, dim yellow lighting, disorganized shelves in background, sense of overwhelming work, documentary photography style"
+                    -->
+                    <div class="mt-6 rounded-lg overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop" 
+                             alt="Escena caótica de panadería tradicional con papeles y libretas" 
+                             class="w-full h-full object-cover grayscale opacity-70"
+                             loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Columna DESPUÉS -->
+                <div class="bg-brand-600 rounded-2xl p-8 border-2 border-brand-400 shadow-2xl shadow-brand-500/20 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-warm-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">TU NEGOCIO EN 90 DÍAS</div>
+                    
+                    <div class="flex items-center mb-6">
+                        <span class="bg-green-400/20 text-green-300 px-3 py-1 rounded-full text-sm font-bold mr-3">DESPUÉS</span>
+                        <h3 class="text-xl font-bold text-white">El control sin perder el alma</h3>
+                    </div>
+                    
+                    <ul class="space-y-4 text-blue-100">
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1">✅</span>
+                            <span><strong>Inventario:</strong> App que avisa: "Harina baja. Pedido automático enviado a proveedor".</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1">✅</span>
+                            <span><strong>Clientes:</strong> María siempre compra baguettes los martes. WhatsApp automático: "¿Las de siempre, María?"</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1">✅</span>
+                            <span><strong>Pedidos:</strong> WhatsApp Business organizado. Tarta de cumpleaños registrada con recordatorio.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 mt-1">✅</span>
+                            <span><strong>Cierre:</strong> Caja cuadrada en 5 minutos. Sabes exactamente cuánto ganaste hoy por producto.</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- 
+                    PROMPT IMAGEN DESPUÉS:
+                    "Modern organized bakery workspace, clean tablet showing inventory dashboard with bread icons and green checkmarks, smartphone with WhatsApp Business open, happy baker in clean apron looking at screen with smile, morning sunlight streaming through window, organized shelves with labeled containers, sense of calm control and professionalism, warm color palette"
+                    -->
+                    <div class="mt-6 rounded-lg overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+                             alt="Panadería digitalizada con dashboard limpio y equipo organizado" 
+                             class="w-full h-full object-cover"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS TRIPLES -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="font-serif text-3xl font-bold text-center text-gray-900 mb-16">¿Qué ganas realmente?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Operativos -->
+                <div class="group hover:shadow-xl transition p-6 rounded-2xl border border-gray-100 bg-white">
+                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">⚡</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Operativos</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">↓</span> 50% menos tiempo en cierre de caja</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">↓</span> 80% reducción de errores de stock</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">↓</span> 2-4 horas semanales liberadas del dueño</li>
+                    </ul>
+                </div>
+
+                <!-- Comerciales -->
+                <div class="group hover:shadow-xl transition p-6 rounded-2xl border border-gray-100 bg-white">
+                    <div class="w-14 h-14 bg-warm-100 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">📈</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Comerciales</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">↑</span> +31% ventas promedio (datos sector)</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">↑</span> +20% ticket medio con tarjeta</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">↑</span> Clientes jóvenes que te encuentran en Google</li>
+                    </ul>
+                </div>
+
+                <!-- Financieros -->
+                <div class="group hover:shadow-xl transition p-6 rounded-2xl border border-gray-100 bg-white">
+                    <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">💰</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Financieros</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">↓</span> -15% merma por producción ajustada a datos</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">↓</span> Multas fiscales evitadas (facturación legal)</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">↑</span> Cash flow visible: 30 días de previsión</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO LO HACEMOS (Los 5 Bloques) -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl font-bold text-gray-900">Tu plan paso a paso</h2>
+                <p class="text-gray-600 mt-2">Sin interrumpir la producción diaria</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Fase 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-brand-500 flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="flex-shrink-0 w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center font-bold text-brand-600">1</div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg font-bold text-gray-900">Cimientos Digitales (Semanas 1-4)</h3>
+                        <p class="text-gray-600">Email corporativo, copias de seguridad automáticas en la nube, y ciberseguridad básica. Tu información a salvo del ransomware.</p>
+                    </div>
+                    <div class="text-sm font-semibold text-brand-600 bg-brand-50 px-3 py-1 rounded-full">Inversión: ~50€</div>
+                </div>
+
+                <!-- Fase 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-warm-500 flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="flex-shrink-0 w-12 h-12 bg-warm-100 rounded-full flex items-center justify-center font-bold text-warm-600">2</div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg font-bold text-gray-900">Operaciones Core (Meses 2-3)</h3>
+                        <p class="text-gray-600">TPV inteligente + ERP ligero. Control de stock, facturación electrónica legal (Verifactu), y tesorería real.</p>
+                    </div>
+                    <div class="text-sm font-semibold text-warm-600 bg-warm-50 px-3 py-1 rounded-full">El corazón del cambio</div>
+                </div>
+
+                <!-- Fase 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-purple-500 flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center font-bold text-purple-600">3</div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg font-bold text-gray-900">La Vitrina Digital (Mes 3-6)</h3>
+                        <p class="text-gray-600">Google Maps optimizado, web básica profesional, WhatsApp Business con catálogo, y programa de fidelización digital.</p>
+                    </div>
+                    <div class="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Nuevos clientes</div>
+                </div>
+
+                <!-- Fase 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-green-500 flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center font-bold text-green-600">4</div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg font-bold text-gray-900">El Factor Humano (Paralelo)</h3>
+                        <p class="text-gray-600">Formación en micro-píldoras (3 min), manual interno digital, y "Campeón Digital" designado en tu equipo. Cero resistencia al cambio.</p>
+                    </div>
+                    <div class="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">Adopción garantizada</div>
+                </div>
+
+                <!-- Fase 5 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-gray-500 flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center font-bold text-gray-600">5</div>
+                    <div class="flex-grow">
+                        <h3 class="text-lg font-bold text-gray-900">Optimización Continua (Mes 6+)</h3>
+                        <p class="text-gray-600">Análisis de datos de ventas, ajuste de producción por temporadas, y automatización de pedidos a proveedores.</p>
+                    </div>
+                    <div class="text-sm font-semibold text-gray-600 bg-gray-50 px-3 py-1 rounded-full">Escalabilidad</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRUEBA / CREDIBILIDAD -->
+    <section class="py-20 bg-brand-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-3xl font-bold mb-8">Resultados que hablan</h2>
+            
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-8 mb-8 border border-white/20">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-warm-400 mb-2">-40%</div>
+                        <div class="text-sm text-blue-200">Tiempo en tareas administrativas</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-warm-400 mb-2">+35%</div>
+                        <div class="text-sm text-blue-200">Nuevos clientes (canal digital)</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-warm-400 mb-2">0€</div>
+                        <div class="text-sm text-blue-200">Errores de caja detectados</div>
+                    </div>
+                </div>
+                <p class="mt-6 text-sm text-blue-300 italic">
+                    *Datos promedio de panaderías artesanales tras implementación completa (6 meses)
+                </p>
+            </div>
+
+            <!-- Elementos de confianza -->
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="flex items-start">
+                    <div class="text-2xl mr-3">🛡️</div>
+                    <div>
+                        <h4 class="font-bold mb-1">Garantía de adopción</h4>
+                        <p class="text-sm text-blue-200">Si tu equipo no usa el sistema en 30 días, ajustamos la formación sin coste.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-2xl mr-3">📋</div>
+                    <div>
+                        <h4 class="font-bold mb-1">Metodología validada</h4>
+                        <p class="text-sm text-blue-200">Basada en el Digital Maturity Model adaptado a micro-pymes españolas.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-2xl mr-3">⚖️</div>
+                    <div>
+                        <h4 class="font-bold mb-1">Cumplimiento legal</h4>
+                        <p class="text-sm text-blue-200">Incluye adaptación a la Ley Crea y Crece (facturación electrónica obligatoria).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contacto" class="py-20 bg-warm-500">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-3xl lg:text-4xl font-bold text-white mb-6">
+                Tu panadería no puede esperar a que "tengas tiempo"
+            </h2>
+            <p class="text-xl text-white/90 mb-8">
+                Cada día que pasa sin digitalizar son horas perdidas, clientes que no te encuentran, 
+                y errores que se acumulan en el cajón.
+            </p>
+
+            <!-- Formulario simple / CTA final -->
+            <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                <div class="space-y-4">
+                    <!-- Variante CTA A: Consulta -->
+                    <a href="mailto:contacto@ejemplo.com?subject=Quiero%20el%20diagnóstico%20gratuito" 
+                       class="block w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition transform hover:scale-105 shadow-lg">
+                        Solicitar diagnóstico gratuito (30 min)
+                    </a>
+                    
+                    <!-- Variante CTA B: Whatsapp (alternativo para testing) -->
+                    <a href="https://wa.me/34XXXXXXXXX?text=Hola,%20quiero%20información%20sobre%20la%20digitalización%20para%20mi%20panadería" 
+                       class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-xl text-lg transition">
+                        Hablar por WhatsApp Business →
+                    </a>
+                </div>
+                
+                <p class="mt-6 text-sm text-gray-500">
+                    📍 Diagnóstico sin compromiso • 🔒 Tus datos están seguros • ⏱️ Respuesta en 24h
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="mb-4">&copy; 2026 Plan de Transformación Digital PYME. Metodología para negocios artesanales.</p>
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="#" class="hover:text-white transition">Política de privacidad</a>
+                <a href="#" class="hover:text-white transition">Ejemplo de informe</a>
+                <span>Hecho con 💙 para panaderías de barrio</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optimizaciones técnicas -->
+    <script>
+        // Lazy loading nativo para imágenes debajo del fold
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        }
+        
+        // Seguimiento básico de clics para A/B testing (usar Google Tag Manager en producción)
+        document.querySelectorAll('.cta-primary, .cta-secondary').forEach(btn => {
+            btn.addEventListener('click', function() {
+                console.log('CTA clicked:', this.textContent.trim());
+                // Aquí iría: gtag('event', 'conversion', {...});
+            });
+        });
+    </script>
+</body>
+</html>
